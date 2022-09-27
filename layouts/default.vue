@@ -18,8 +18,11 @@
         <v-tab
           v-for="link in links"
           :key="link"
+          :to="link.to"
+          router
+          exact
         >
-          {{ link }}
+          {{ link.title }}
         </v-tab>
       </v-tabs>
 
@@ -41,7 +44,7 @@
               rounded="lg"
               min-height="268"
             >
-              <!--  -->
+            <Sns></Sns>
             </v-sheet>
           </v-col>
 
@@ -53,7 +56,7 @@
               min-height="70vh"
               rounded="lg"
             >
-              <!--  -->
+            <Nuxt />
             </v-sheet>
           </v-col>
 
@@ -75,19 +78,31 @@
 </template>
 
 <script>
+import Sns from '~/components/Sns.vue';
   export default {
     data: () => ({
-      links: [
-        'Dashboard',
-        'Messages',
-        'Profile',
-        'Updates',
-      ],
+        links: [
+            {
+                title: "SNS",
+                to: "/index"
+            },
+            {
+                title: "Messages",
+                to: "/inspire"
+            },
+            {
+                title: "Profile",
+                to: "/Profile"
+            },
+            {
+                title: "お問い合わせ",
+                to: "/form"
+            },
+        ],
     }),
-  }
+    components: { Sns }
+}
 </script>
-
-
 
 
 <!-- <template>
