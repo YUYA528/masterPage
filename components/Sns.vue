@@ -1,3 +1,31 @@
 <template>
-    <p>snssnssnssns</p>
+    <div>
+        <v-btn
+        color="secondary"
+        elevation="5"
+        large
+        >
+        <v-icon dark>
+            mdi-instagram
+        </v-icon>
+        </v-btn>
+        <v-btn
+        color="secondary"
+        elevation="5"
+        large
+        >
+        <v-icon dark>
+            mdi-twitter
+        </v-icon>
+        </v-btn>
+        <v-btn
+        color="secondary"
+        elevation="5"
+        large
+        >
+        <v-icon>
+            mdi-google
+        </v-icon>
+        </v-btn>
+    </div>
 </template>
